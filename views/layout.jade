@@ -1,0 +1,48 @@
+doctype html
+html(ng-app="drinkMachine")
+    head
+        title #{title}
+        block scripts
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+            script(src='http://code.jquery.com/jquery-1.11.1.js')
+            script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js')
+            script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+            script(src='https://cdn.socket.io/socket.io-1.3.5.js')
+        meta(name='viewport' content='width-device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    body(ng-controller="MachineController as machine")
+        nav.navbar.navbar-default(role='navigation')
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') Drink Machine
+            // Collect the nav links, forms, and other content for toggling
+            .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/add') Add
+                    li
+                        a(href='#') About
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='#') Link
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Dropdown
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href='#') Action
+                            li
+                                a(href='#') Another action
+                            li
+                                a(href='#') Something else here
+            // /.navbar-collapse
+
+    block content
+    // put scripts at bottom for faster rendering?
+

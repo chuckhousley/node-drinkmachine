@@ -1,0 +1,12 @@
+extends ./layout.jade
+append scripts
+    script(src='/js/machine.js')
+    script(src='/js/drinks.js')
+block content
+    .container(ng-controller="DrinkController as drinkCtrl")
+        div#main
+            span text
+        button(id='db' ng-click='drinkCtrl.buttonClick()') testdb
+        .list-group#drink
+            .list-group-item(ng-repeat="drink in drinks track by $index")
+                drink-item

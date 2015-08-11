@@ -1,0 +1,26 @@
+body{
+    padding: 40px 15px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+a {
+    color: #00B7FF
+}
+
+.btn {
+    color: #FF44AA
+}
+
+.red {
+    color: #cc0000;
+}
+
+#main {
+    background-color: #CCCCCC;
+    padding: 10px;
+}
+
+#drink {
+    background-color: #BBBBBB
+}
